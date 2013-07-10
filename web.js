@@ -11,7 +11,7 @@ app.get('/', function(request, response) {
   fd = fs.openSync('index.html','r');
   pos = 0;
   pos += fs.readSync(fd,buf,pos,BUF_LEN);
-  response.send(buf.toString());
+  response.send(buf.toString("utf-8",0,pos));
 });
 
 var port = process.env.PORT || 5000;
