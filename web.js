@@ -4,7 +4,7 @@ var app = express.createServer(express.logger());
 
 
 app.get('/', function(request, response) {
-  var BUF_LEN = 512;
+  var BUF_LEN = 5120;
   var fs = require('fs');
   var buf = new Buffer(BUF_LEN);
 
