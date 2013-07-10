@@ -8,7 +8,7 @@ app.get('/', function(request, response) {
   var fs = require('fs');
   var buf = new Buffer(BUF_LEN);
 
-  fd = fs.openSync('index.html');
+  fd = fs.openSync('index.html','r');
   pos = 0;
   pos += fs.readSync(fd,buf,pos,BUF_LEN);
   response.send(buf.toString());
